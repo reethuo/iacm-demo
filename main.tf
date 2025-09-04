@@ -5,7 +5,7 @@
 # Terraform variables are defined in variables.tf
 provider "google" {
   project = var.project
-  zone    = var.region
+  zone    = <+env.variables.region>
 }
 resource "google_compute_instance" "vm" {
   name         = "vm-${var.project}"
