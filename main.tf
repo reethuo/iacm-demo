@@ -10,7 +10,7 @@ provider "google" {
 resource "google_compute_instance" "vm" {
   name         = "vm-${var.project}"
   machine_type = "e2-micro"
-  zone         = "${var.region}-a"
+  zone         = "${var.region}-b"
 
   boot_disk {
     initialize_params {
